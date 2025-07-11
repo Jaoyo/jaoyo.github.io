@@ -66,7 +66,9 @@ description: 图床是一个在网络上存储图片的地方，通过URL就可�
 
 ## 五、上传图片到图床
 
-1. 打开PicGo软解，左侧选择上传区
+1. 打开PicGo软件，左侧选择上传区
 2. 将图片拉进PicGo上传框界面
 3. 上传成功后，默认会自动复制Markdown的插入图片格式
 4. 粘贴到Markdown文档中即可
+
+[参考链接](https://picgo.github.io/PicGo-Doc/zh/guide/)
