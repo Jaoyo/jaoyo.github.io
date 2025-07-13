@@ -12,18 +12,21 @@ description:
 
 2. 在仓库根目录添加新文件，注意文件名要为`index.html`
 
-例如添加以下爱心代码
+    例如添加[爱心代码](#code-section)
 
-<details>
-  <summary>点击展开 HTML 代码</summary>
+3. 在上面导航栏进入`Settings` - `Pages` - `Branch`选择并保存
+
+4. 等待`Github Action`部署
+
+<a id="code-section"></a>
 ```html
-  &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-    &lt;title&gt;💗&lt;/title&gt;
-
-    &lt;style&gt;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>💗</title>
+ 
+    <style>
       html,
       body {
         height: 100%;
@@ -50,26 +53,81 @@ description:
         color: #ea80b0;
       }
       @keyframes anim {
-        0% { transform: scale(0.8); }
-        25% { transform: scale(0.7); }
-        50% { transform: scale(1); }
-        75% { transform: scale(0.7); }
-        100% { transform: scale(0.8); }
+        0% {
+          transform: scale(0.8);
+        }
+        25% {
+          transform: scale(0.7);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(0.7);
+        }
+        100% {
+          transform: scale(0.8);
+        }
       }
       @-webkit-keyframes anim {
-        0% { -webkit-transform: scale(0.8); }
-        25% { -webkit-transform: scale(0.7); }
-        50% { -webkit-transform: scale(1); }
-        75% { -webkit-transform: scale(0.7); }
-        100% { -webkit-transform: scale(0.8); }
+        0% {
+          -webkit-transform: scale(0.8);
+        }
+        25% {
+          -webkit-transform: scale(0.7);
+        }
+        50% {
+          -webkit-transform: scale(1);
+        }
+        75% {
+          -webkit-transform: scale(0.7);
+        }
+        100% {
+          -webkit-transform: scale(0.8);
+        }
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;canvas id=&quot;pinkboard&quot;&gt;&lt;/canvas&gt;
-    &lt;div id=&quot;name&quot; style=&quot;color: blue;&quot;&gt;CHN&lt;/div&gt; 
-
-    &lt;script&gt;
+      @-o-keyframes anim {
+        0% {
+          -o-transform: scale(0.8);
+        }
+        25% {
+          -o-transform: scale(0.7);
+        }
+        50% {
+          -o-transform: scale(1);
+        }
+        75% {
+          -o-transform: scale(0.7);
+        }
+        100% {
+          -o-transform: scale(0.8);
+        }
+      }
+      @-moz-keyframes anim {
+        0% {
+          -moz-transform: scale(0.8);
+        }
+        25% {
+          -moz-transform: scale(0.7);
+        }
+        50% {
+          -moz-transform: scale(1);
+        }
+        75% {
+          -moz-transform: scale(0.7);
+        }
+        100% {
+          -moz-transform: scale(0.8);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="pinkboard"></canvas>
+    <!-- 在下面加名字 -->
+     <div id="name" style="color: blue;">CHN</div> 
+ 
+    <script>
       var settings = {
         particles: {
           length: 500, 
@@ -173,7 +231,7 @@ description:
           firstActive = 0,
           firstFree = 0,
           duration = settings.particles.duration;
-
+ 
         function ParticlePool(length) {
           particles = new Array(length);
           for (var i = 0; i < particles.length; i++)
@@ -295,12 +353,8 @@ description:
           render();
         }, 10);
       })(document.getElementById("pinkboard"));
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+ 
+    </script>
+  </body>
+</html>
 ```
-</details>
-
-3. 在上面导航栏进入`Settings` - `Pages` - `Branch`选择并保存
-
-4. 等待`Github Action`部署
