@@ -1,7 +1,7 @@
 ---
 title: Ubuntu解压安装v2ray
 date: 2025-07-11 23:20:00 +0800
-categories: [Linux, 应用记录]
+categories: [应用记录]
 tags: [Linux, proxy, v2ray]
 description: Ubuntu系统下安装v2ray的过程记录。
 ---

@@ -1,7 +1,7 @@
 ---
 title: Ubuntu配置
 date: 2025-07-11 23:20:00 +0800
-categories: [Linux, 应用记录]
+categories: [Linux]
 tags: [Linux]
 description: 记录一下自己Ubuntu系统的一些配置属性。
 ---

@@ -2,7 +2,7 @@
 title: powershell7设置代理
 date: 2025-07-11 23:20:00 +0800
 categories: [应用记录]
-tags: [proxy，powershell]
+tags: [proxy, powershell]
 description: 设置powershell7终端的流量走代理
 ---
 
