@@ -14,7 +14,7 @@ description:
 
 例如添加以下爱心代码
 
-<details> <summary>点击展开代码</summary>
+<!-- <details> <summary>点击展开代码</summary> -->
 ```html
 <!--index.html-->
 <!DOCTYPE html>
@@ -356,7 +356,7 @@ description:
 </html>
 ```
 {: file="index.html" }
-</details>
+<!-- </details> -->
 
 3. 在上面导航栏进入`Settings` - `Pages` - `Branch`选择并保存
 
