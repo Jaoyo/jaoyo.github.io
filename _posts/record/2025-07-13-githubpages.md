@@ -18,7 +18,7 @@ description:
 
 4. 等待`Github Action`部署
 
-<a id="code-section"></a>
+<div id="code-section"></div>
 ```html
 <!DOCTYPE html>
 <html>
