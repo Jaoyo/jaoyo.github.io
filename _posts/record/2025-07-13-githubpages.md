@@ -16,7 +16,8 @@ description:
 
 <details>
   <summary>点击展开 HTML 代码</summary>
-  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+```html
+  &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot; /&gt;
@@ -297,7 +298,7 @@ description:
     &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+```
 </details>
 
 3. 在上面导航栏进入`Settings` - `Pages` - `Branch`选择并保存
