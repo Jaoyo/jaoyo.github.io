@@ -11,7 +11,7 @@ description: Linux cat以及less命令的语法高亮配置。
 > 即使用这几个命令查看代码文件时，没有语法高亮显示
 > 下面就来介绍一下如何将这几个命令的输出设置成语法高亮
 
-## 1、ccat
+### ccat
 
 cat命令来源于英语单词concatenate的缩写，主要用于查看文件内容，适合查看内容较少、纯文本的文件。  
 cat命令同时也可以将多个文件的内容进行连接并打印到标准输出。  
@@ -44,7 +44,7 @@ ccat则是一个功能类似于cat的命令，不同点在于对于输出内容�
 
 这样输入`cat`命令时就默认使用`ccat`可执行文件了
 
-## 2、less
+### less
 
 1. 安装source-highlight
     `sudo apt-get install source-highlight`
