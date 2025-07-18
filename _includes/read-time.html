@@ -20,10 +20,12 @@
 <!-- return element -->
 <span class="readtime">
   <span class="word-count">
-    {{ words }} {{ site.data.locales[include.lang].post.words }}
+    <em>
+      {{ words }} {{ site.data.locales[include.lang].post.words }}
+    </em>
   </span>
 
-  <span class="divider"> · </span>
+  <span class="divider"></span>
   <em>
     {{- read_time -}}
     {{ ' ' }}
