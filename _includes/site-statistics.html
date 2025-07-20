@@ -1,0 +1,17 @@
+{% assign total_words = 0 %}
+{% for post in site.posts %}
+{% assign words = post.content | strip_html | number_of_words: 'auto' %}
+{% assign total_words = total_words | plus: words %}
+{% endfor %}
+
+<section>
+    <h2 class="panel-heading">{{- site.data.locales[include.lang].panel.trending_tags -}}</h2>
+    <div class="post-statistics mb-4 p-3 rounded shadow-sm bg-light">
+        <h3 class="h5 mb-2">📊 站点统计</h3>
+        <ul class="list-unstyled mb-0">
+            <li>📝 文章总数：{{ site.posts | size }}</li>
+            <li>🔠 总字数：{{ total_words }} 字</li>
+            <li>🕒 最近更新：{{ site.posts | first.date | date: "%Y-%m-%d" }}</li>
+        </ul>
+    </div>
+</section>
