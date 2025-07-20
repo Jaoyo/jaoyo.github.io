@@ -8,12 +8,12 @@
 {% assign latest = sorted | first %}
 
 <section>
-    <h2 class="panel-heading">{{- site.data.locales[include.lang].panel.trending_tags -}}</h2>
+    <h2 class="panel-heading">{{- site.data.locales[include.lang].panel.site-statistics -}}</h2>
     <div class="post-statistics mb-4 p-3 rounded shadow-sm bg-light">
         <ul class="list-unstyled mb-0">
-            <li>📝 文章总数：{{ site.posts | size }}</li>
-            <li>🔠 总字数：{{ total_words }} 字</li>
-            <li>🕒 最近更新：{{ latest.last_modified_at | default: latest.date | date: "%Y-%m-%d %H:%M:%S" }}</li>
+            <li class="text-truncate lh-lg">📝 {{- site.data.locales[include.lang].panel.article-count -}}: {{ site.posts | size }} {{- site.data.locales[include.lang].panel.article-num -}}</li>
+            <li class="text-truncate lh-lg">🔠 {{- site.data.locales[include.lang].panel.article-words -}}: {{ total_words }} {{- site.data.locales[include.lang].panel.article-word -}}</li>
+            <li class="text-truncate lh-lg">🕒 {{- site.data.locales[include.lang].panel.last-update -}}: {{ latest.last_modified_at | default: latest.date | date: "%Y-%m-%d %H:%M:%S" }}</li>
         </ul>
     </div>
 </section>
