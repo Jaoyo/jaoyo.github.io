@@ -5,7 +5,7 @@ categories: [网络服务]
 tags: [Docker]
 ---
 
-### 获取镜像
+## 获取镜像
 
 ```shell
 docker pull ubuntu:18.04
@@ -17,7 +17,7 @@ docker pull docker.io/library/ubuntu:18.04
 - Docker 镜像仓库地址：地址的格式一般是 `<域名/IP>[:端口号]`。默认地址是 Docker Hub(`docker.io`)。
 - 仓库名：如之前所说，这里的仓库名是两段式名称，即 `<用户名>/<软件名>`。对于 Docker Hub，如果不给出用户名，则默认为 `library`，也就是官方镜像。
 
-### 运行
+## 运行
 
 ```shell
 docker run -it --rm ubuntu:18.04 bash
@@ -29,7 +29,7 @@ docker run -it --rm ubuntu:18.04 bash
 - `ubuntu:18.04`：这是指用 `ubuntu:18.04` 镜像为基础来启动容器。
 - `bash`：放在镜像名后的是 **命令**，这里我们希望有个交互式 Shell，因此用的是 `bash`。
 
-### 查看
+## 查看
 
 ```shell
 # 列出已下载的镜像

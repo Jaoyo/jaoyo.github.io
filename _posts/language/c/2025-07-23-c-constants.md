@@ -8,7 +8,7 @@ description: 在 C 语言中，常量（constant）是值在程序运行过程�
 
 常量的意思就是这个数据在声明之后，就无法再改变。
 
-### 字面量常量（Literal Constants）
+## 字面量常量（Literal Constants）
 
 直接出现在代码中的数值、字符或字符串等：
 
@@ -19,7 +19,7 @@ description: 在 C 语言中，常量（constant）是值在程序运行过程�
 "hello"    // 字符串常量
 ```
 
-### 符号常量（`#define` 宏定义）
+## 符号常量（`#define` 宏定义）
 
 通过预处理指令定义：
 
@@ -34,7 +34,7 @@ description: 在 C 语言中，常量（constant）是值在程序运行过程�
 * 没有类型检查
 * 可用于条件编译
 
-### `const` 常量（关键字修饰变量）
+## `const` 常量（关键字修饰变量）
 
 ```c
 const int max = 100;
@@ -69,7 +69,7 @@ int main(){
       |       ^
 ```
 
-### 枚举常量（`enum`）
+## 枚举常量（`enum`）
 
 ```c
 enum Color { RED, GREEN, BLUE };
@@ -77,7 +77,7 @@ enum Color { RED, GREEN, BLUE };
 
 默认 RED=0, GREEN=1, BLUE=2，也可以指定值。
 
-### 字符串常量
+## 字符串常量
 
 ```c
 const char* msg = "Hello";

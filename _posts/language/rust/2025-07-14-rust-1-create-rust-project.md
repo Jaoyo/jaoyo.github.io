@@ -7,7 +7,7 @@ published: false
 description: 
 ---
 
-### 新建项目
+## 新建项目
 
 ```shell
 cargo new hello_world
@@ -30,7 +30,7 @@ tree -a
 ```
 
 
-### 运行项目
+## 运行项目
 
 1. 命令运行
 
@@ -52,14 +52,14 @@ tree -a
     cargo build --release
     ```
 
-### 代码验证
+## 代码验证
 
 使用 `cargo build` 或 `cargo run` 都需要一定的时间，如果只是检查代码而不生成，可以使用 `cargo check` 命令
 
 他的作用是快速的检查一下代码是否编译通过
 
 
-### Cargo.toml和Cargo.lock
+## Cargo.toml和Cargo.lock
 
 `Cargo.toml` 和 `Cargo.lock` 是 `Cargo` 的核心文件，他的所有活动都基于这两者
 
@@ -69,9 +69,9 @@ tree -a
 什么情况下该把 `Cargo.lock` 上传到 git 仓库里？很简单，当你的项目是一个可运行的程序时，就上传 `Cargo.lock`，如果是一个依赖库项目，那么请把它添加到 `.gitignore` 中。
 
 
-#### Cargo.toml结构
+### Cargo.toml结构
 
-##### package配置段落
+#### package配置段落
 
 `package`中记录了项目的详细信息
 
@@ -86,7 +86,7 @@ edition = "2021"
 `version` : 当前项目版本，默认0.1.0
 `edition` : Rust的大版本号
 
-##### 定义项目依赖
+#### 定义项目依赖
 
 在 `Cargo.toml`中，主要通过各种依赖段落来描述该项目的各种依赖：
 * 基于Rust官方仓库`crates.io`，通过版本说明来描述
@@ -101,6 +101,6 @@ color = { git = "https://github.com/bjz/color-rs" }
 geometry = { path = "crates/geometry" }
 ```
 
-### 其他
+## 其他
 
 1. VSCode 插件rust-analyzer在Ubuntu16.04上的运行问题  [Issues11558](https://github.com/rust-lang/rust-analyzer/issues/11558#issuecomment-1053979557)

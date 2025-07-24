@@ -6,7 +6,7 @@ tags: [C语言]
 description: 
 ---
 
-### 算术运算符 (Arithmetic operators)
+## 算术运算符 (Arithmetic operators)
 
 算术运算符用于执行常见的数学运算。
 
@@ -20,7 +20,7 @@ description:
 | ++       | 增量 Increment    | 将变量的值增加 1 | ++x     |
 | --       | 乘量 Decrement    | 将变量的值减 1 | --x     |
 
-### 赋值运算符 (Assignment operators)
+## 赋值运算符 (Assignment operators)
 
 赋值运算符用于为变量赋值。
 
@@ -53,7 +53,7 @@ x += 5;
 | >>=      | x >>= 3 | x = x >> 3 |
 | <<=      | x <<= 3 | x = x << 3 |
 
-### 比较运算符 (Comparison operators)
+## 比较运算符 (Comparison operators)
 
 比较运算符用于比较两个值。
 
@@ -79,7 +79,7 @@ printf("%d", x > y); // 返回 1（真），因为 5 大于 3
 | >=       | 大于或等于  | x >= y  |
 | <=       | 小于或等于  | x <= y  |
 
-### 逻辑运算符 (Logical operators)
+## 逻辑运算符 (Logical operators)
 
 逻辑运算符用于确定变量或值之间的逻辑：
 
@@ -89,7 +89,7 @@ printf("%d", x > y); // 返回 1（真），因为 5 大于 3
 | \|\|  | 或逻辑 | 如果其中一个语句为真，则返回真 | x < 5 \|\| x < 4   |
 | !     | 非逻辑 | 反转结果，如果结果为真则返回假 | !(x < 5 && x < 10) |
 
-### 位运算符 (Bitwise operators)
+## 位运算符 (Bitwise operators)
 
 运算符 | 描述 | 实例
 :- |:- |:- 
@@ -142,7 +142,7 @@ Line 5 - c 的值是 240
 Line 6 - c 的值是 15
 ```
 
-### sizeof 运算符
+## sizeof 运算符
 
 可以使用 `sizeof` 运算符找到数据类型或变量的内存大小（以字节为单位）：
 

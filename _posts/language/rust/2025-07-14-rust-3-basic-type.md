@@ -7,7 +7,7 @@ published: false
 description: 
 ---
 
-### 基本类型
+## 基本类型
 
 1. [数值类型](/_posts/language/rust/basic-type/2025-07-14-rust-Numerical.md)：
 	* 有符号整数（i8，i16，i32，i64，isize）
@@ -19,9 +19,9 @@ description:
 4. 字符类型：单个Uincde字符，存储为4个字节
 5. 单元类型
 
-### 复合类型
+## 复合类型
 
-### 类型推导和标注
+## 类型推导和标注
 
 Rust编译器可以根据变量的值和上下文中的使用方法来自动推导出变量的类型
 

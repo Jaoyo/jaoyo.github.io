@@ -6,8 +6,6 @@ tags: [Pages, 博客]
 description: 
 ---
 
-### 创建Github repository
-
 1. 在GitHub中创建一个新的仓库，仓库的名称自定义，其他都是默认值。
 
 2. 在仓库根目录添加新文件，注意文件名要为`index.html`

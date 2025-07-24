@@ -6,7 +6,7 @@ tags: [C语言]
 description: 
 ---
 
-### 基本数据类型
+## 基本数据类型
 
 > 数据类型指定变量将存储的信息的大小和类型。
 
@@ -107,7 +107,7 @@ size of signed long long: 8
 size of unsigned long long: 8
 ```
 
-### 基本格式说明符
+## 基本格式说明符
 
 每种数据类型都有不同的格式说明符。这里是其中的一些：
 
@@ -125,7 +125,7 @@ size of unsigned long long: 8
 10 进制 | `%hd` | `%d` | `%ld`
 16 进制 | `%hx` 或者 `%hX` |` %x` 或者 `%X` | `%lx` 或者 `%lX`
 
-#### int 整数
+### int 整数
 
 ```c
 // 创建 整数 变量
@@ -134,7 +134,7 @@ int myNum = 5;
 printf("%d\n", myNum);
 ```
 
-#### float 单精度的十进制类型
+### float 单精度的十进制类型
 
 ```c
 float myFloatNum = 5.99; // 浮点数
@@ -142,7 +142,7 @@ float myFloatNum = 5.99; // 浮点数
 printf("%f\n", myFloatNum);
 ```
 
-#### double 双精度的十进制类型
+### double 双精度的十进制类型
 
 ```c
 double myDouble = 3.2325467;  
@@ -150,7 +150,7 @@ double myDouble = 3.2325467;
 printf("%lf\n", myDouble);
 ```
 
-#### char 字符
+### char 字符
 
 ```c
 char myLetter = 'D'; // 字符串

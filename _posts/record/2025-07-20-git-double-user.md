@@ -10,7 +10,7 @@ description:
 
 > 本文将带你在十分钟内为同一台电脑配置好两个 GitHub 账号，从此不再为切换账号而烦恼。
 
-### 清除环境
+## 清除环境
 
 > 这一步主要是避免配置冲突，可以跳过
 {: .prompt-info}
@@ -21,15 +21,15 @@ description:
 rm -rf ~/.ssh/*
 ```
 
-### 生成SSH密钥
+## 生成SSH密钥
 
-#### 1. 生成第一个密钥
+### 1. 生成第一个密钥
 
 ```shell
 ssh-keygen -t ed25519 -C "personal@example.com" -f ~/.ssh/id_ed25519_personal
 ```
 
-#### 2. 生成第二个密钥
+### 2. 生成第二个密钥
 
 ```shell
 ssh-keygen -t ed25519 -C "work@example.com" -f ~/.ssh/id_ed25519_work
@@ -42,7 +42,7 @@ id_ed25519_personal     id_ed25519_personal.pub
 id_ed25519_work     id_ed25519_work.pub
 ```
 
-### 为每个密钥配置对应的 GitHub 账号
+## 为每个密钥配置对应的 GitHub 账号
 
 ```shell
 cat id_ed25519_personal.pub
@@ -51,7 +51,7 @@ cat id_ed25519_work.pub
 
 将公钥内容粘贴到[Github SSH keys配置](https://github.com/settings/keys)
 
-### 配置 `~/.ssh/config`，自动匹配不同账号
+## 配置 `~/.ssh/config`，自动匹配不同账号
 
 编辑或创建 `~/.ssh/config`：
 
@@ -72,14 +72,14 @@ Host github-work
 
 ```
 
-### 测试连接
+## 测试连接
 
 ```shell
 ssh -T git@github-personal
 ssh -T git@github-work
 ```
 
-### 使用方法
+## 使用方法
 
 当你想使用哪个账号推送时，就用 `git@github-xxx:user/repo.git` 的方式添加远程地址：
 

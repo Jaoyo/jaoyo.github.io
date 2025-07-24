@@ -6,7 +6,7 @@ tags: [Linux]
 description: 
 ---
 
-### SSH心跳
+## SSH心跳
 
 打开`/etc/ssh/sshd_config`，添加
 
@@ -17,7 +17,7 @@ ClientAliveCountMax 5   # 表示允许超时5次。
 
 表示每过一段时间会发送一个KeepAlive请求，保证终端不会因为超时空闲而断开连接，当无响应次数达到`ClientAliveCountMax`时，就自动断开
 
-### 修改端口、协议
+## 修改端口、协议
 
 ssh的默认端口为22
 
@@ -39,13 +39,13 @@ ALLowUsers aliyun text@192.168.1.1,root@192.168.*
 DenyUsers zhangsan aliyun
 ```
 
-### 禁止root用户登录
+## 禁止root用户登录
 
 ```vim
 PermitRootLogin no
 ```
 
-### 禁止空密码登录
+## 禁止空密码登录
 
 ```vim
 PermitEmptyPasswords no

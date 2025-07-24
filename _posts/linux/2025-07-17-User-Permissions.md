@@ -8,16 +8,14 @@ description:
 
 > 在Linux系统中，root的权限是最高的，所有一般都会禁止root用户直接登录ssh，使用普通用户登录有特殊需求的话，可以用`su`切换到root用户或使用`sudo`权限。
 
-<!-- ### 新建普通用户 -->
-
-### 新建普通用户并设置密码
+## 新建普通用户并设置密码
 
 ```shell
 # 按照提示输入密码，其他非必填可跳过
 adduser newuser 
 ```
 
-### 为普通用户添加超级用户权限
+## 为普通用户添加超级用户权限
 
 **方法1： 添加新用户到sudo用户组**
 
@@ -44,7 +42,7 @@ newuser ALL=(ALL:ALL) ALL
 # Ctrl-X,接着y退出
 ```
 
-### 删除用户命令
+## 删除用户命令
 
 ```shell
 deluser newuser
@@ -53,7 +51,7 @@ deluser newuser
 deluser --remove-home newuser
 ```
 
-### 禁止root用户ssh登录
+## 禁止root用户ssh登录
 
 ```vim
 # 打开配置文件
@@ -66,7 +64,7 @@ PermitRootLogin no
 systemctl restart sshd
 ```
 
-### 普通用户免密切换到root用户(未验证)
+## 普通用户免密切换到root用户(未验证)
 
 在`/etc/sudoers`有这么一行
 
