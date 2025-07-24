@@ -63,8 +63,8 @@ int main(){
 此时编译就会报错
 
 ```shell
-.\data_format.c: In function 'main':
-.\data_format.c:5:7: error: assignment of read-only variable 'a'
+.\c_constants.c: In function 'main':
+.\c_constants.c:5:7: error: assignment of read-only variable 'a'
     5 |     a = 20;
       |       ^
 ```
