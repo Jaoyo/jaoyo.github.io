@@ -100,4 +100,6 @@ git clone git@github-work:yourworkname/work-repo.git
 > 注意
 {: .prompt-warning}
 
-修改了`config`文件后，本地所有的git仓库地址都需要跟着修改，**需要将`github.com`修改成`Host`指向的名称，域名不再使用`github.com`**
+修改了`config`文件后，本地所有的git仓库地址都需要跟着修改
+
+**需要将`github.com`修改成`Host`指向的名称，域名不再使用`github.com`**
