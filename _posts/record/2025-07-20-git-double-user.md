@@ -21,6 +21,8 @@ description:
 rm -rf ~/.ssh/*
 ```
 
+> 在Windows下，这个路径为`C:\Users\Username\.ssh`
+
 ## 生成SSH密钥
 
 ### 1. 生成第一个密钥
@@ -94,3 +96,8 @@ git clone git@github-personal:yourusername/personal-repo.git
 ```shell
 git clone git@github-work:yourworkname/work-repo.git
 ```
+
+> 注意
+{: .prompt-warning}
+
+修改了`config`文件后，本地所有的git仓库地址都需要跟着修改，**需要将`github.com`修改成`Host`指向的名称，域名不再使用`github.com`**
