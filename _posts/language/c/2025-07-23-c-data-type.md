@@ -114,10 +114,14 @@ size of unsigned long long: 8
 格式说明符 | 数据类型
 --- | ---
 `%d` 或 `%i` | int 整数
+`%u` | 无符号10进制整数
 `%f` | float 单精度的十进制类型
 `%lf` | double 高精度浮点数据或数字
+`%e` 或 `%E` | 以科学计数法表述`double`数据
 `%c` | char 字符
 `%s` | 用于 strings
+`%n` | 输出到此字符之前为止，一共输出的字符个数
+`%m` | 打印error值对应的出错内容
 
 | | short | int | long
 --- | --- | --- | ---
