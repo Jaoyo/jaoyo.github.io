@@ -18,7 +18,7 @@ description:
 | /        | 除 Division       | 将一个值除以另一个       | x / y   |
 | %        | 取模 Modulus      | 返回除法余数            | x % y   |
 | ++       | 增量 Increment    | 将变量的值增加 1 | ++x     |
-| --       | 乘量 Decrement    | 将变量的值减 1 | --x     |
+| ---      | 乘量 Decrement    | 将变量的值减 1 | ---x     |
 
 ## 赋值运算符 (Assignment operators)
 
