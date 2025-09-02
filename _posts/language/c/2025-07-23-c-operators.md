@@ -162,3 +162,32 @@ printf("%lu\n", sizeof(myFloat));
 printf("%lu\n", sizeof(myDouble));
 printf("%lu\n", sizeof(myChar));
 ```
+
+## 逗号运算符
+
+逗号表达式的值是以逗号分隔的列表中的最后一个表达式的值。
+
+从本质上讲，逗号的作用是导致一系列运算被顺序执行。
+
+```c
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int i, j;
+   
+   j = 10;
+   i = (j++, j+100, 999+j);
+
+   cout << i;
+   
+   return 0;
+}
+```
+
+这段程序的运行结果是
+
+```
+1010
+```
