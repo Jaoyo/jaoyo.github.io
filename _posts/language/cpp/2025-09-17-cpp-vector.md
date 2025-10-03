@@ -1,7 +1,7 @@
 ---
 title: C++ Vector
 date: 2025-09-17 17:30:00 +0800
-categories: [编程语言, C++]
+categories: [编程语言, Cpp]
 tags: [C++语言]
 description: 
 ---

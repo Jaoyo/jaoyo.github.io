@@ -1,7 +1,7 @@
 ---
 title: C++ sizeof
 date: 2025-10-03 12:00:00 +0800
-categories: [编程语言, C++]
+categories: [编程语言, Cpp]
 tags: [C++语言]
 description: 
 ---

@@ -1,7 +1,7 @@
 ---
 title: C++ 日期时间
 date: 2025-09-03 23:00:00 +0800
-categories: [编程语言, C++]
+categories: [编程语言, Cpp]
 tags: [C++语言]
 description: 
 ---
