@@ -6,9 +6,9 @@ tags: [C++语言]
 description: 
 ---
 
-`vector`是一个能够存放任意类型的动态数组，能够增加和压缩数据。
+**vector**是一个能够存放任意类型的动态数组，能够增加和压缩数据。
 
-`vector`的用法类似于Python中的`list`数据类型。
+**vector**的用法类似于Python中的`list`数据类型。
 
 ## 基本概念
 
@@ -35,18 +35,51 @@ description:
 
 1. 构造函数
 
-	* `vector()`: 创建一个空的`vector`
-	* `vector(int nSize)`: 创建一个`vector`，元素个数为nSize
-	* `vector(int nSize, const t& t)`: 创建一个`vector`，元素个数为nSize，且值均为`t`
+	* `vector()`: 创建一个空的**vector**
+	* `vector(int nSize)`: 创建一个**vector**，元素个数为**nSize**
+	* `vector(int nSize, const t& t)`: 创建一个**ector**，元素个数为**nSize**，且值均为**t**
 	* `vector(const vector&)`: 复制构造函数
-	* `vector(begin, end)`: 复制`[begin, end)`区间内的另一个数组的元素到`vector`中
+	* `vector(begin, end)`: 复制`[begin, end)`区间内的另一个数组的元素到**vector**中
+
+  ```c++
+  std::vector<int> vec;
+  vec.push_back(1);
+
+  std::vector<int> vec(2);
+  std::vector<int> vec(1,1);
+
+  std::vector<int> vec = {1, 2, 3, 4};
+  std::vector<int> vec{1, 2, 3, 4, 5};
+
+  std::vector<int> vec_copy(vec);
+
+  std::vector<int> vec2(vec.begin(), vec.begin()+3);
+  ```
 
 2. 增加函数
 
 	* `void push_back(const T& x)`: 向量尾部添加一个元素x
-	* `iterator insert(iterator it, const T& x)`: 向量中迭代器指向元素前增加一个元素x
-	* `iterator insert(iterator it, int n, const T& x)`: 向量中迭代器指向元素前增加n个相同的元素x
+	* `iterator insert(iterator it, const T& x)`: 向量中迭代器指向的位置前前增加一个元素x
+	* `iterator insert(iterator it, int n, const T& x)`: 向量中迭代器指向的位置前增加n个相同的元素x
 	* `iterator insert(iterator it, const_iterator first, const_iterator last)`: 向量中迭代器指向元素前插入另一个相同类型向量的`[first,last)`间的数据
+
+  ```c++
+  vector<int> vec = {1, 2, 3, 4};
+  vec.push_back(7);
+
+  auto it = vec.begin() + 1;
+  vec.insert(it, 7);  // 1, 7, 2, 3, 4
+
+  auto it = vec.begin() + 1;
+  vec.insert(it, 2, 7);  // 1, 7, 7, 2, 3, 4
+  // vec.insert(vec.begin()  + 1, 2, 7);
+
+  vector<int> vec1 = {1, 4};
+  vector<int> vec2 = {2, 3};
+
+  vec1.insert(vec1.begin() + 1, vec2.begin(), vec2.end());
+  // 结果: [1, 2, 3, 4]
+  ```
 
 3. 删除函数
 
@@ -55,9 +88,20 @@ description:
 	* `void pop_back()`: 删除向量中最后一个元素
 	* `void clear()`: 清空向量中所有元素
 
+  ```c++
+  vector<int> vec = {1, 2, 3, 4};
+
+  auto it = vec.begin() + 1;
+  vec.erase(it);
+
+  vec.erase(vec.begin() + 1);
+
+  vec.erase(vec.begin() + 1, vec.end() - 1);
+  ```
+
 4. 遍历函数
 
-	* `reference at(int pos)`: 返回pos位置元素的引用
+	* `reference at(int pos)`: 返回`pos`位置元素的引用
 	* `reference front()`: 返回首元素的引用
 	* `reference back()`: 返回尾元素的引用
 	* `iterator begin()`: 返回向量头指针，指向第一个元素
@@ -159,7 +203,7 @@ using namespace std;
 
 ```c++
 template <
-	class T,								// 存储的元素类型
+	class T,								              // 存储的元素类型
 	class Allocator = std::allocator<T>		// 内存分配器（默认用std::allocator>
 > class vector;	
 ```
@@ -167,7 +211,7 @@ template <
 例如：
 
 ```c++
-vector<int> v1;		// 实例化为存int的动态数组
+vector<int> v1;		  // 实例化为存int的动态数组
 vector<string> v2;  // 实例化为存string的动态数组
 ```
 
@@ -177,3 +221,25 @@ vector<string> v2;  // 实例化为存string的动态数组
 * `vector` 动态分配，支持自动扩容，安全且方便。
 * 普通数组大小固定，越界访问不会报错。
 * 推荐优先用 `vector` 代替裸数组。
+
+## 动态分配和指针
+
+```c++
+std::vector<int> vec = {1, 2, 3, 4};
+int* p = &vec[2];
+vec.push_back(5);
+std::cout << *p << std::endl;
+```
+
+在上面的程序中，首先定义了一个容量为4的**vector**，并且定义了一个指向向量第二个数值的指针
+
+指针 `p` 指向 `vec[2]`（即值为 `3` 的元素），保存了该元素的内存地址。
+
+接着使用`push_back`函数增加了一个元素，此时由于`vec`默认的容量为4，添加后为5个元素，超出了容量，触发自动扩容机制
+
+这时候会重新为`vec`申请容量更大（大于5）的内存，并且将元素复制到新的内存中，释放旧内存
+
+重新分配后，原来所有指向`vec`的迭代器、引用和指针都有可能失效，`p`成为悬空指针
+
+> 永远不要在可能重新分配的操作（ `push_back` 、 `resize`、 `insert`等）中保留指向 `std::vector` 元素的原始指针。重新分配后使用索引或更新指针。
+{: .prompt-info}
