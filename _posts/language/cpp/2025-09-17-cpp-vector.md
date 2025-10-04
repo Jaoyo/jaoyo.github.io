@@ -37,24 +37,24 @@ description:
 
 	* `vector()`: 创建一个空的**vector**
 	* `vector(int nSize)`: 创建一个**vector**，元素个数为**nSize**
-	* `vector(int nSize, const t& t)`: 创建一个**ector**，元素个数为**nSize**，且值均为**t**
+	* `vector(int nSize, const t& t)`: 创建一个**vector**，元素个数为**nSize**，且值均为**t**
 	* `vector(const vector&)`: 复制构造函数
 	* `vector(begin, end)`: 复制`[begin, end)`区间内的另一个数组的元素到**vector**中
 
-  ```c++
-  std::vector<int> vec;
-  vec.push_back(1);
+    ```c++
+    std::vector<int> vec;
+    vec.push_back(1);
 
-  std::vector<int> vec(2);
-  std::vector<int> vec(1,1);
+    std::vector<int> vec(2);
+    std::vector<int> vec(1,1);
 
-  std::vector<int> vec = {1, 2, 3, 4};
-  std::vector<int> vec{1, 2, 3, 4, 5};
+    std::vector<int> vec = {1, 2, 3, 4};
+    std::vector<int> vec{1, 2, 3, 4, 5};
 
-  std::vector<int> vec_copy(vec);
+    std::vector<int> vec_copy(vec);
 
-  std::vector<int> vec2(vec.begin(), vec.begin()+3);
-  ```
+    std::vector<int> vec2(vec.begin(), vec.begin()+3);
+    ```
 
 2. 增加函数
 
@@ -63,23 +63,23 @@ description:
 	* `iterator insert(iterator it, int n, const T& x)`: 向量中迭代器指向的位置前增加n个相同的元素x
 	* `iterator insert(iterator it, const_iterator first, const_iterator last)`: 向量中迭代器指向元素前插入另一个相同类型向量的`[first,last)`间的数据
 
-  ```c++
-  vector<int> vec = {1, 2, 3, 4};
-  vec.push_back(7);
+    ```c++
+    vector<int> vec = {1, 2, 3, 4};
+    vec.push_back(7);
 
-  auto it = vec.begin() + 1;
-  vec.insert(it, 7);  // 1, 7, 2, 3, 4
+    auto it = vec.begin() + 1;
+    vec.insert(it, 7);  // 1, 7, 2, 3, 4
 
-  auto it = vec.begin() + 1;
-  vec.insert(it, 2, 7);  // 1, 7, 7, 2, 3, 4
-  // vec.insert(vec.begin()  + 1, 2, 7);
+    auto it = vec.begin() + 1;
+    vec.insert(it, 2, 7);  // 1, 7, 7, 2, 3, 4
+    // vec.insert(vec.begin()  + 1, 2, 7);
 
-  vector<int> vec1 = {1, 4};
-  vector<int> vec2 = {2, 3};
+    vector<int> vec1 = {1, 4};
+    vector<int> vec2 = {2, 3};
 
-  vec1.insert(vec1.begin() + 1, vec2.begin(), vec2.end());
-  // 结果: [1, 2, 3, 4]
-  ```
+    vec1.insert(vec1.begin() + 1, vec2.begin(), vec2.end());
+    // 结果: [1, 2, 3, 4]
+    ```
 
 3. 删除函数
 
@@ -88,16 +88,16 @@ description:
 	* `void pop_back()`: 删除向量中最后一个元素
 	* `void clear()`: 清空向量中所有元素
 
-  ```c++
-  vector<int> vec = {1, 2, 3, 4};
+    ```c++
+    vector<int> vec = {1, 2, 3, 4};
 
-  auto it = vec.begin() + 1;
-  vec.erase(it);
+    auto it = vec.begin() + 1;
+    vec.erase(it);
 
-  vec.erase(vec.begin() + 1);
+    vec.erase(vec.begin() + 1);
 
-  vec.erase(vec.begin() + 1, vec.end() - 1);
-  ```
+    vec.erase(vec.begin() + 1, vec.end() - 1);
+    ```
 
 4. 遍历函数
 
