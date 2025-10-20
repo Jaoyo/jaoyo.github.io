@@ -68,7 +68,7 @@ extern const int max_value;        // 引用
 * 如果想让`const`全局变量被多个文件共享，必须显式添加`extern`
 
 > 对于局部变量则不同
-{: .prompt-warn}
+{: .prompt-warning}
 
 在局部变量中，作用域都只在声明的函数内，他们没有链接性
 

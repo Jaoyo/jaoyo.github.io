@@ -46,7 +46,8 @@ volatile int x;
 	```
 
 	> `volatile` 并不能保证原子性或内存可见性顺序，所以多线程同步更应该使用 `std::atomic`
-	{: .prompt-warn}
+	{: .prompt-warning}
+
 
 3. 信号处理函数
 
@@ -73,6 +74,7 @@ const volatile int y;
 	```c++
 	const volatile int *TEMP_REG = (int*)0x40001000;
 	int t = *TEMP_REG;	// 每次读取都要从硬件寄存器拿最新值
+	```
 
 2. 只读状态标志
 
